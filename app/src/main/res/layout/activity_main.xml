@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- objeto para criar a zona de tabulação -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- introduzir os itens para a tabulação -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_esquerda" />
+
+        <!-- introduzir os itens para a tabulação -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_centro" />
+
+        <!-- introduzir os itens para a tabulação -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_direita" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- obejeto para mostrar o conteudo dos fragmentos
+         vamos usar um ViewPager2 por que tem mais recursos
+         que o objeto inicial (ViewPager)
+         - android:layout_below - informar que o atributo deve ficar por baixo
+     -->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout" />
+
+
+</LinearLayout>

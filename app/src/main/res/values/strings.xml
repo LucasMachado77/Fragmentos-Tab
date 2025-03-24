@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Fragmentos com Tabulação</string>
+    <string name="titulo_fragmento_esquerda">Fragmento da esquerda</string>
+    <string name="titulo_fragmento_direita">Fragmento da direita</string>
+    <string name="titulo_fragmento_centro">Fragmento do centro</string>
+    <string name="texto_fragmento_esquerda">Nestes fragmentos deveremos colocar os conteudos que
+        queremos apresentar na janela do telemóvel. \n\n
+        Podemos colocar todos os objetos úteis: \n
+        -texto\n
+        -imagens\n
+        -botões\n
+        -mapas\n
+        -etc.. \n
+    </string>
+
+    <string name="tab_esquerda">Esquerda</string>
+    <string name="tab_direita">Direita</string>
+    <string name="tab_centro">Centro</string>
+
 </resources>
